@@ -9,13 +9,20 @@ describe("Shopping List Item Tests", () => {
   });
 
   it("ShoppingListItem has a property named name", () => {
-    var name = new ShoppingListItem("name");
-    name.name.should.equal("name");
+    var myItem = new ShoppingListItem("pizza");
+    expect(myItem).to.have.property("name")
   });
 
   it("ShoppingListItem has a property named description", () => {
-    var description = new ShoppingListItem("description");
-    description.description.should.equal("description");
+    var itemDescription = new ShoppingListItem("cheesy goodness");
+    expect(itemDescription).to.have.property("description")
   });
+
+  it("ShoppingListItem has a property named isDone", () => {
+    var isDone = new ShoppingListItem("isDone");
+    expect(isDone).to.have.property("isDone")
+  });
+
+
 
 });
